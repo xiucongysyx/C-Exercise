@@ -1,0 +1,181 @@
+==7454== Memcheck, a memory error detector
+==7454== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==7454== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==7454== Command: ./ex4
+==7454== Parent PID: 6671
+==7454== 
+--7454-- 
+--7454-- Valgrind options:
+--7454--    -v
+--7454--    --log-file=ex4.log
+--7454-- Contents of /proc/version:
+--7454--   Linux version 5.19.0-38-generic (buildd@lcy02-amd64-001) (x86_64-linux-gnu-gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #39~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 17 21:16:15 UTC 2
+--7454-- 
+--7454-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--7454-- Page sizes: currently 4096, max supported 4096
+--7454-- Valgrind library directory: /usr/libexec/valgrind
+--7454-- Reading syms from /home/xiucong/C-Exercise/ex4/ex4
+--7454-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--7454--   Considering /usr/lib/debug/.build-id/aa/1b0b998999c397062e1016f0c95dc0e8820117.debug ..
+--7454--   .. build-id is valid
+--7454-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--7454--    object doesn't have a symbol table
+--7454--    object doesn't have a dynamic symbol table
+--7454-- Scheduler: using generic scheduler lock implementation.
+--7454-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==7454== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-7454-by-xiucong-on-???
+==7454== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-7454-by-xiucong-on-???
+==7454== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-7454-by-xiucong-on-???
+==7454== 
+==7454== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==7454== don't want to do, unless you know exactly what you're doing,
+==7454== or are doing some strange experiment):
+==7454==   /usr/bin/vgdb --pid=7454 ...command...
+==7454== 
+==7454== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==7454==   /path/to/gdb ./ex4
+==7454== and then give GDB the following command
+==7454==   target remote | /usr/bin/vgdb --pid=7454
+==7454== --pid is optional if only one valgrind process is running
+==7454== 
+--7454-- REDIR: 0x402aa60 (ld-linux-x86-64.so.2:strlen) redirected to 0x580bcec2 (???)
+--7454-- REDIR: 0x402a830 (ld-linux-x86-64.so.2:index) redirected to 0x580bcedc (???)
+--7454-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--7454--    object doesn't have a symbol table
+--7454-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+--7454--    object doesn't have a symbol table
+==7454== WARNING: new redirection conflicts with existing -- ignoring it
+--7454--     old: 0x0402aa60 (strlen              ) R-> (0000.0) 0x580bcec2 ???
+--7454--     new: 0x0402aa60 (strlen              ) R-> (2007.0) 0x0484ee30 strlen
+--7454-- REDIR: 0x4027240 (ld-linux-x86-64.so.2:strcmp) redirected to 0x484fcd0 (strcmp)
+--7454-- REDIR: 0x402afc0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4853840 (mempcpy)
+--7454-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--7454--   Considering /usr/lib/debug/.build-id/89/c3cb85f9e55046776471fed05ec441581d1969.debug ..
+--7454--   .. build-id is valid
+==7454== WARNING: new redirection conflicts with existing -- ignoring it
+--7454--     old: 0x04915ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--7454--     new: 0x04915ce0 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==7454== WARNING: new redirection conflicts with existing -- ignoring it
+--7454--     old: 0x04915ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--7454--     new: 0x04915ce0 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+==7454== WARNING: new redirection conflicts with existing -- ignoring it
+--7454--     old: 0x04915ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--7454--     new: 0x04915ce0 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==7454== WARNING: new redirection conflicts with existing -- ignoring it
+--7454--     old: 0x04915ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--7454--     new: 0x04915ce0 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+--7454-- REDIR: 0x49187a0 (libc.so.6:strnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4918a60 (libc.so.6:strpbrk) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4918360 (libc.so.6:strcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4936d50 (libc.so.6:wcsnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919750 (libc.so.6:memset) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49355c0 (libc.so.6:wcslen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919c90 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49353f0 (libc.so.6:wcschr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49182e0 (libc.so.6:index) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49189e0 (libc.so.6:rindex) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919620 (libc.so.6:memmove) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+==7454== Preferring higher priority redirection:
+--7454--     old: 0x04a10940 (__memcpy_avx_unalign) R-> (2018.0) 0x04850f90 __memcpy_avx_unaligned_erms
+--7454--     new: 0x04a10940 (__memcpy_avx_unalign) R-> (2018.1) 0x04852880 memmove
+--7454-- REDIR: 0x4935470 (libc.so.6:wcscmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919a60 (libc.so.6:stpncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4935a30 (libc.so.6:wmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49188b0 (libc.so.6:strncmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919af0 (libc.so.6:strcasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49184a0 (libc.so.6:strcspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49354f0 (libc.so.6:wcscpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4918250 (libc.so.6:strcat) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919be0 (libc.so.6:strncasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919500 (libc.so.6:bcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49215f0 (libc.so.6:memrchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x491b090 (libc.so.6:strchrnul) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4918410 (libc.so.6:strcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919b90 (libc.so.6:strcasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4918720 (libc.so.6:strlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4918950 (libc.so.6:strncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x49199d0 (libc.so.6:stpcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919470 (libc.so.6:memchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4918b80 (libc.so.6:strspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919850 (libc.so.6:mempcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4919b40 (libc.so.6:strncasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x491b000 (libc.so.6:rawmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--7454-- REDIR: 0x4a0d790 (libc.so.6:__strrchr_avx2) redirected to 0x484e810 (rindex)
+--7454-- REDIR: 0x4a0d580 (libc.so.6:__strchrnul_avx2) redirected to 0x4853330 (strchrnul)
+--7454-- REDIR: 0x4915120 (libc.so.6:malloc) redirected to 0x4848820 (malloc)
+--7454-- REDIR: 0x4a10900 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4853440 (mempcpy)
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48E6B56: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== Use of uninitialised value of size 8
+==7454==    at 0x48CA33B: _itoa_word (_itoa.c:177)
+==7454==    by 0x48E5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48CA34C: _itoa_word (_itoa.c:177)
+==7454==    by 0x48E5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48E6643: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48E5C85: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+--7454-- REDIR: 0x4915460 (libc.so.6:free) redirected to 0x484b210 (free)
+==7454== 
+==7454== HEAP SUMMARY:
+==7454==     in use at exit: 0 bytes in 0 blocks
+==7454==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==7454== 
+==7454== All heap blocks were freed -- no leaks are possible
+==7454== 
+==7454== Use --track-origins=yes to see where uninitialised values come from
+==7454== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+==7454== 
+==7454== 1 errors in context 1 of 5:
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48E5C85: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== 
+==7454== 1 errors in context 2 of 5:
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48E6643: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== 
+==7454== 1 errors in context 3 of 5:
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48CA34C: _itoa_word (_itoa.c:177)
+==7454==    by 0x48E5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== 
+==7454== 1 errors in context 4 of 5:
+==7454== Use of uninitialised value of size 8
+==7454==    at 0x48CA33B: _itoa_word (_itoa.c:177)
+==7454==    by 0x48E5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== 
+==7454== 1 errors in context 5 of 5:
+==7454== Conditional jump or move depends on uninitialised value(s)
+==7454==    at 0x48E6B56: __vfprintf_internal (vfprintf-internal.c:1516)
+==7454==    by 0x48D081E: printf (printf.c:33)
+==7454==    by 0x109188: main (ex4.c:9)
+==7454== 
+==7454== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
