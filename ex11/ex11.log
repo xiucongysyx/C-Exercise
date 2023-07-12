@@ -1,0 +1,32 @@
+==17580== Memcheck, a memory error detector
+==17580== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==17580== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==17580== Command: ./ex11 dfa asdf asd fsd daf s
+==17580== Parent PID: 5728
+==17580== 
+==17580== 
+==17580== Process terminating with default action of signal 6 (SIGABRT)
+==17580==    at 0x4906A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==17580==    by 0x4906A7C: __pthread_kill_internal (pthread_kill.c:78)
+==17580==    by 0x4906A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==17580==    by 0x48B2475: raise (raise.c:26)
+==17580==    by 0x48987F2: abort (abort.c:79)
+==17580==    by 0x48F96F5: __libc_message (libc_fatal.c:155)
+==17580==    by 0x49A6769: __fortify_fail (fortify_fail.c:26)
+==17580==    by 0x49A6735: __stack_chk_fail (stack_chk_fail.c:24)
+==17580==    by 0x109292: main (ex11.c:29)
+==17580== 
+==17580== HEAP SUMMARY:
+==17580==     in use at exit: 1,024 bytes in 1 blocks
+==17580==   total heap usage: 1 allocs, 0 frees, 1,024 bytes allocated
+==17580== 
+==17580== LEAK SUMMARY:
+==17580==    definitely lost: 0 bytes in 0 blocks
+==17580==    indirectly lost: 0 bytes in 0 blocks
+==17580==      possibly lost: 0 bytes in 0 blocks
+==17580==    still reachable: 1,024 bytes in 1 blocks
+==17580==         suppressed: 0 bytes in 0 blocks
+==17580== Rerun with --leak-check=full to see details of leaked memory
+==17580== 
+==17580== For lists of detected and suppressed errors, rerun with: -s
+==17580== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
