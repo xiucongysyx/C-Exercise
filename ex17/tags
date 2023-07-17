@@ -1,0 +1,119 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/xiucong/C-Exercise/ex17/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(TARGET)	Makefile	/^$(TARGET): $(SRCS)$/;"	t
+Address	ex17.c	/^struct Address {$/;"	s	file:
+Address	ex17_1.c	/^struct Address {$/;"	s	file:
+Address	ex17_2.c	/^struct Address {$/;"	s	file:
+Address	ex17_zs.c	/^struct Address { \/\/结构体address，该结构体存储了每组数据的具体内容$/;"	s	file:
+Address_print	ex17.c	/^void Address_print(struct Address *addr)$/;"	f	typeref:typename:void
+Address_print	ex17_1.c	/^void Address_print(struct Address *addr)$/;"	f	typeref:typename:void
+Address_print	ex17_2.c	/^void Address_print(struct Address *addr)$/;"	f	typeref:typename:void
+Address_print	ex17_zs.c	/^void Address_print(struct Address *addr) \/\/这个函数用来打印address 类型的结构体中/;"	f	typeref:typename:void
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-Wall -g$/;"	m
+Connection	ex17.c	/^struct Connection {$/;"	s	file:
+Connection	ex17_1.c	/^struct Connection {$/;"	s	file:
+Connection	ex17_2.c	/^struct Connection {$/;"	s	file:
+Connection	ex17_zs.c	/^struct Connection { \/\/结构体Connection，该结构体包含了一个文件名的指针和一/;"	s	file:
+Database	ex17.c	/^struct Database {$/;"	s	file:
+Database	ex17_1.c	/^struct Database {$/;"	s	file:
+Database	ex17_2.c	/^struct Database {$/;"	s	file:
+Database	ex17_zs.c	/^struct Database { \/\/结构体Database，该结构体是嵌套结构体，他包含了MAX_ROWS /;"	s	file:
+Database_close	ex17.c	/^void Database_close(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_close	ex17_1.c	/^void Database_close(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_close	ex17_2.c	/^void Database_close(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_close	ex17_zs.c	/^void Database_close(struct Connection *conn) \/\/关闭结构体，释放malloc函数分配的内/;"	f	typeref:typename:void
+Database_create	ex17.c	/^void Database_create(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_create	ex17_1.c	/^void Database_create(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_create	ex17_2.c	/^void Database_create(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_create	ex17_zs.c	/^void Database_create(struct Connection *conn) \/\/创造数据库类型的结构体$/;"	f	typeref:typename:void
+Database_delete	ex17.c	/^void Database_delete(struct Connection *conn, int id)$/;"	f	typeref:typename:void
+Database_delete	ex17_1.c	/^void Database_delete(struct Connection *conn, int id)$/;"	f	typeref:typename:void
+Database_delete	ex17_2.c	/^void Database_delete(struct Connection *conn, int id)$/;"	f	typeref:typename:void
+Database_delete	ex17_zs.c	/^void Database_delete(struct Connection *conn, int id) \/\/删除数据库结构体，这个函数/;"	f	typeref:typename:void
+Database_get	ex17.c	/^void Database_get(struct Connection *conn, int id)$/;"	f	typeref:typename:void
+Database_get	ex17_1.c	/^void Database_get(struct Connection *conn, int id)$/;"	f	typeref:typename:void
+Database_get	ex17_2.c	/^void Database_get(struct Connection *conn, int id)$/;"	f	typeref:typename:void
+Database_get	ex17_zs.c	/^void Database_get(struct Connection *conn, int id) \/\/得到数据库，打印数据库中的内/;"	f	typeref:typename:void
+Database_list	ex17.c	/^void Database_list(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_list	ex17_1.c	/^void Database_list(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_list	ex17_2.c	/^void Database_list(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_list	ex17_zs.c	/^void Database_list(struct Connection *conn) \/\/列出整个数据库文件中的内容$/;"	f	typeref:typename:void
+Database_load	ex17.c	/^void Database_load(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_load	ex17_1.c	/^void Database_load(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_load	ex17_2.c	/^void Database_load(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_load	ex17_zs.c	/^void Database_load(struct Connection *conn) \/\/这个函数用来将文件的内容加载到Dat/;"	f	typeref:typename:void
+Database_open	ex17.c	/^struct Connection *Database_open(const char *filename, char mode)$/;"	f	typeref:struct:Connection *
+Database_open	ex17_1.c	/^struct Connection *Database_open(const char *filename, char mode)$/;"	f	typeref:struct:Connection *
+Database_open	ex17_2.c	/^struct Connection *Database_open(const char *filename, char mode)$/;"	f	typeref:struct:Connection *
+Database_open	ex17_zs.c	/^struct Connection *Database_open(const char *filename, char mode) \/\/创造一个Database 类型/;"	f	typeref:struct:Connection *
+Database_set	ex17.c	/^void Database_set(struct Connection *conn, int id, const char *name, const char *email)$/;"	f	typeref:typename:void
+Database_set	ex17_1.c	/^void Database_set(struct Connection *conn, int id, const char *name, const char *email)$/;"	f	typeref:typename:void
+Database_set	ex17_2.c	/^void Database_set(struct Connection *conn, int id, const char *name, const char *email)$/;"	f	typeref:typename:void
+Database_set	ex17_zs.c	/^void Database_set(struct Connection *conn, int id, const char *name, const char *email) \/\/将数/;"	f	typeref:typename:void
+Database_write	ex17.c	/^void Database_write(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_write	ex17_1.c	/^void Database_write(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_write	ex17_2.c	/^void Database_write(struct Connection *conn)$/;"	f	typeref:typename:void
+Database_write	ex17_zs.c	/^void Database_write(struct Connection *conn) \/\/向数据库中写数据$/;"	f	typeref:typename:void
+MAX_DATA	ex17.c	/^#define MAX_DATA /;"	d	file:
+MAX_DATA	ex17_1.c	/^#define MAX_DATA /;"	d	file:
+MAX_DATA	ex17_2.c	/^int MAX_DATA;$/;"	v	typeref:typename:int
+MAX_DATA	ex17_zs.c	/^#define MAX_DATA /;"	d	file:
+MAX_ROWS	ex17.c	/^#define MAX_ROWS /;"	d	file:
+MAX_ROWS	ex17_1.c	/^#define MAX_ROWS /;"	d	file:
+MAX_ROWS	ex17_2.c	/^int MAX_ROWS;$/;"	v	typeref:typename:int
+MAX_ROWS	ex17_zs.c	/^#define MAX_ROWS /;"	d	file:
+SRCS	Makefile	/^SRCS = ex1.c$/;"	m
+TARGET	Makefile	/^TARGET = ex1 $/;"	m
+all	Makefile	/^all:ex1 ex3$/;"	t
+clean	Makefile	/^clean:$/;"	t
+db	ex17.c	/^    struct Database *db;$/;"	m	struct:Connection	typeref:struct:Database *	file:
+db	ex17_1.c	/^    struct Database *db;$/;"	m	struct:Connection	typeref:struct:Database *	file:
+db	ex17_2.c	/^    struct Database *db;$/;"	m	struct:Connection	typeref:struct:Database *	file:
+db	ex17_zs.c	/^    struct Database *db;$/;"	m	struct:Connection	typeref:struct:Database *	file:
+die	ex17.c	/^void die(const char *message)$/;"	f	typeref:typename:void
+die	ex17_1.c	/^void die(const char *message)$/;"	f	typeref:typename:void
+die	ex17_2.c	/^void die(const char *message)$/;"	f	typeref:typename:void
+die	ex17_zs.c	/^void die(const char *message) \/\/die函数，用来打印错误信息，主要是一些可以通/;"	f	typeref:typename:void
+die_c	ex17_1.c	/^void die_c(const char *message, struct Connection *conn)$/;"	f	typeref:typename:void
+email	ex17.c	/^    char email[MAX_DATA];$/;"	m	struct:Address	typeref:typename:char[]	file:
+email	ex17_1.c	/^    char email[MAX_DATA];$/;"	m	struct:Address	typeref:typename:char[]	file:
+email	ex17_2.c	/^    char email[MAX_DATA];$/;"	m	struct:Address	typeref:typename:char[]	file:
+email	ex17_zs.c	/^    char email[MAX_DATA];\/\/邮箱$/;"	m	struct:Address	typeref:typename:char[]	file:
+enter	ex17_2.c	/^    char enter;$/;"	m	struct:Address	typeref:typename:char	file:
+file	ex17.c	/^    FILE *file;$/;"	m	struct:Connection	typeref:typename:FILE *	file:
+file	ex17_1.c	/^    FILE *file;$/;"	m	struct:Connection	typeref:typename:FILE *	file:
+file	ex17_2.c	/^    FILE *file;$/;"	m	struct:Connection	typeref:typename:FILE *	file:
+file	ex17_zs.c	/^    FILE *file;$/;"	m	struct:Connection	typeref:typename:FILE *	file:
+id	ex17.c	/^    int id;$/;"	m	struct:Address	typeref:typename:int	file:
+id	ex17_1.c	/^    int id;$/;"	m	struct:Address	typeref:typename:int	file:
+id	ex17_2.c	/^    int id;$/;"	m	struct:Address	typeref:typename:int	file:
+id	ex17_zs.c	/^    int id;     \/\/数据id$/;"	m	struct:Address	typeref:typename:int	file:
+main	ex17.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+main	ex17_1.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+main	ex17_2.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+main	ex17_zs.c	/^int main(int argc, char *argv[]) \/\/主函数$/;"	f	typeref:typename:int
+main	fflush.c	/^int main( void )$/;"	f	typeref:typename:int
+maxData	ex17_2.c	/^    int maxData; $/;"	m	struct:Database	typeref:typename:int	file:
+maxRows	ex17_2.c	/^    int maxRows;$/;"	m	struct:Database	typeref:typename:int	file:
+name	ex17.c	/^    char name[MAX_DATA];$/;"	m	struct:Address	typeref:typename:char[]	file:
+name	ex17_1.c	/^    char name[MAX_DATA];$/;"	m	struct:Address	typeref:typename:char[]	file:
+name	ex17_2.c	/^    char *name;$/;"	m	struct:Address	typeref:typename:char *	file:
+name	ex17_zs.c	/^    char name[MAX_DATA]; \/\/名字$/;"	m	struct:Address	typeref:typename:char[]	file:
+rows	ex17.c	/^    struct Address rows[MAX_ROWS];$/;"	m	struct:Database	typeref:struct:Address[]	file:
+rows	ex17_1.c	/^    struct Address rows[MAX_ROWS];$/;"	m	struct:Database	typeref:struct:Address[]	file:
+rows	ex17_2.c	/^    struct Address rows[MAX_ROWS];$/;"	m	struct:Database	typeref:struct:Address[]	file:
+rows	ex17_zs.c	/^    struct Address rows[MAX_ROWS]; \/\/我们可以使用Database->rows[i] 来访问指定的add/;"	m	struct:Database	typeref:struct:Address[]	file:
+set	ex17.c	/^    int set;$/;"	m	struct:Address	typeref:typename:int	file:
+set	ex17_1.c	/^    int set;$/;"	m	struct:Address	typeref:typename:int	file:
+set	ex17_2.c	/^    int set;$/;"	m	struct:Address	typeref:typename:int	file:
+set	ex17_zs.c	/^    int set;    \/\/数据是否储存了数据$/;"	m	struct:Address	typeref:typename:int	file:
