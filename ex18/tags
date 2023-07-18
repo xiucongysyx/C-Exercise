@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/xiucong/C-Exercise/ex18/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(TARGET)	Makefile	/^$(TARGET): $(SRCS)$/;"	t
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-Wall -g$/;"	m
+SRCS	Makefile	/^SRCS = ex1.c$/;"	m
+TARGET	Makefile	/^TARGET = ex1 $/;"	m
+all	Makefile	/^all:ex1 ex3$/;"	t
+bubble_sort	ex18.c	/^int *bubble_sort(int *number, int count, compare_cb cmp)$/;"	f	typeref:typename:int *
+bubble_sort	ex18_1.c	/^int *bubble_sort(int *number, int count, compare_cb cmp)$/;"	f	typeref:typename:int *
+bubble_sort	ex18_zs.c	/^int *bubble_sort(int *number, int count, compare_cb cmp) \/\/冒泡排序函数$/;"	f	typeref:typename:int *
+clean	Makefile	/^clean:$/;"	t
+compare_cb	ex18.c	/^typedef int (*compare_cb)(int a, int b);$/;"	t	typeref:typename:int (*)(int a,int b)	file:
+compare_cb	ex18_1.c	/^typedef int (*compare_cb)(int a, int b);$/;"	t	typeref:typename:int (*)(int a,int b)	file:
+compare_cb	ex18_zs.c	/^typedef int (*compare_cb)(int a, int b); \/\/定义了一个函数指针$/;"	t	typeref:typename:int (*)(int a,int b)	file:
+die	ex18.c	/^void die(const char *message)$/;"	f	typeref:typename:void
+die	ex18_1.c	/^void die(const char *message)$/;"	f	typeref:typename:void
+die	ex18_zs.c	/^void die(const char *message)$/;"	f	typeref:typename:void
+main	ex18.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+main	ex18_1.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+main	ex18_zs.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+reverse_order	ex18.c	/^int reverse_order(int a, int b)$/;"	f	typeref:typename:int
+reverse_order	ex18_1.c	/^int reverse_order(int a, int b)$/;"	f	typeref:typename:int
+reverse_order	ex18_zs.c	/^int reverse_order(int a, int b) \/\/如果cmp是这个函数的话就是逆向排序。$/;"	f	typeref:typename:int
+sorted_order	ex18.c	/^int sorted_order(int a, int b)$/;"	f	typeref:typename:int
+sorted_order	ex18_1.c	/^int sorted_order(int a, int b)$/;"	f	typeref:typename:int
+sorted_order	ex18_zs.c	/^int sorted_order(int a, int b) \/\/如果cmp是这个函数的话，那么就是从小到大排序/;"	f	typeref:typename:int
+strange_order	ex18.c	/^int strange_order(int a, int b)$/;"	f	typeref:typename:int
+strange_order	ex18_1.c	/^int strange_order(int a, int b)$/;"	f	typeref:typename:int
+strange_order	ex18_zs.c	/^int strange_order(int a, int b) \/\/如果cmp是这个函数的话，就是奇怪排序。$/;"	f	typeref:typename:int
+test_sorting	ex18.c	/^void test_sorting(int *numbers, int count, compare_cb cmp)$/;"	f	typeref:typename:void
+test_sorting	ex18_1.c	/^void test_sorting(int *numbers, int count, compare_cb cmp)$/;"	f	typeref:typename:void
+test_sorting	ex18_zs.c	/^void test_sorting(int *numbers, int count, compare_cb cmp) \/\/测试函数，用于测试程序$/;"	f	typeref:typename:void
