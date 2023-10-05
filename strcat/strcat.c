@@ -8,10 +8,11 @@ int strcmp(const char *s1, const char *s2) {
 }
 
 char *strcpy(char *dst, const char *src) {
+    char *dstp = dst;
     while (*src != '\0') {
-        *dst++ = *src++;
+        *dstp++ = *src++;
     }
-    *dst = '\0';
+    *dstp = '\0';
     return dst;
 }
 
@@ -25,8 +26,10 @@ size_t strlen(const char *s) {
 }
 
 char *strcat(char *dst, const char *src) {
-    dst = dst + strlen(dst);
-    return strcpy(dst, src);
+    char *dstp = dst;
+    dstp = dst + strlen(dst);
+    strcpy(dstp, src);
+    return dst;
 }
 
 int main() {
@@ -34,6 +37,12 @@ int main() {
     const char *src = "World!";
 	const char *src_bk = "World!";
     const char *add = "Goodbye!";
+    char *s[] = {
+        ", World!\n",
+        "Hello, World!\n"
+    };
+    char str1[] = "Hello";
+    char str[20];
     
     printf("原始目标字符串: %s\n", dest);
     printf("等待复制字符串: %s\n", src);
@@ -49,7 +58,10 @@ int main() {
 
 	printf("比较相同字符串: %d\n", strcmp(src, src_bk));
 	printf("比较不同字符串: %d\n", strcmp(dest, src));
+
+    printf("expr = %d\nstr = %s\ns[1]= %s\n", (strcmp(strcat(strcpy(str, str1), s[0]), s[1]) == 0), str, s[1]);
 	
+    printf("memcmp(str, s[1]) = %d\n", strcmp(str, s[1]));
     return 0;
 }
 
