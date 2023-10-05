@@ -1,36 +1,43 @@
 #include<stdio.h>
-typedef unsigned long long int op_t;
-typedef unsigned long int	uintptr_t;
-int
-strcmp (const char *p1, const char *p2)
+strcmp (const char *s1, const char *s2)
 {
-  /* Handle the unaligned bytes of p1 first.  */
-  /* op_t 是一个长长整型的类型，是64位无符号整数。 */
-  /* uintptr_t 是一个长整形的类型，是64位无符号整数。 */
-  uintptr_t n = -(uintptr_t)p1 % sizeof(op_t);
-  for (int i = 0; i < n; ++i)
-    {
-      unsigned char c1 = *p1++;
-      unsigned char c2 = *p2++;
-      int diff = c1 - c2;
-      if (c1 == '\0' || diff != 0)
-	return diff;
+    while(*s1++ == *s2++) {
+        if(*s1 == '\0') return 0;
     }
+    printf("s1 = %c  s2 = %c a-b = %d s1-s2 = %d\n", *(s1-1), *(s2-1), 'a' - 'b', *(s1-1) - *(s2-1));
+    return *(s1-1) - *(s2-1);
+}
 
-  /* P1 is now aligned to op_t.  P2 may or may not be.  */
-  const op_t *x1 = (const op_t *) p1;
-  op_t w1 = *x1++;
-  uintptr_t ofs = (uintptr_t) p2 % sizeof(op_t);
-  return ofs == 0
-    ? 1000
-    : 0;
+char *s[] = {
+	"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+	"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+	"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+	", World!\n",
+	"Hello, World!\n",
+	"#####"
+};
+
+char str1[] = "Hello";
+char str[20];
+
+void check(int i) {
+	if(i == 0) {
+	printf("strcmp correct\n"); 
+	return;
+	}
+	else {
+	printf("strcmp value = %d\n", i); 
+	return;
+	}
 }
 
 int main()
 {
-	char *str1 = "abcdefgh";
-	char *str2 = "abcdefgh";
-	int *str3 = (char *)str2;
-printf("%d\n",	strcmp(str1, (char *)str3));
+	check(strcmp(s[0], s[2]) == 0);
+	check(strcmp(s[0], s[1]) < 0);
+	check(strcmp(s[0] + 1, s[1] + 1) < 0);
+	check(strcmp(s[0] + 2, s[1] + 2) < 0);
+	check(strcmp(s[0] + 3, s[1] + 3) < 0);
+
 	return 0;
 }
